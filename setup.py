@@ -12,6 +12,7 @@ setup(
     version="0.1.0",
     description="Netdot DNS authentication plugin for Certbot",
     long_description=long_desc,
+    long_description_content_type="text/markdown",
     license="MIT",
     author="Mattias Amnefelt",
     author_email="mattiasa@cantemo.com",
