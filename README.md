@@ -3,7 +3,6 @@
 This allows automatic completion of `Certbot's <https://github.com/certbot/certbot>`_
 DNS01 challange for domains managed via `Netdot <https://github.com/cvicente/Netdot/>`_ DNS.
 
-
 ## Installing
 
 ```
@@ -47,16 +46,15 @@ Then you can run `certbot` using:
 ```
 $ sudo certbot certonly \
     --authenticator certbot-netdot:auth \
-    --certbot-loopia:auth-credentials credentials.ini \
+    --certbot-netdot:auth-credentials credentials.ini \
     -d domain.com
 ```
 
-Attribution
------------
+## Attribution
+
 
 This plugin is based on https://github.com/runfalk/certbot-loopia by Andreas Runfalk
 
-Changelog
----------
+## Changelog
 
 No releases yet
