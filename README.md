@@ -57,4 +57,15 @@ This plugin is based on https://github.com/runfalk/certbot-loopia by Andreas Run
 
 ## Changelog
 
-No releases yet
+### Version 0.1.1
+
+Released 2020-05-15
+
+* Default cert verification to True
+* Fixed generating wildcard certs or other multiple certs for a single domain name
+
+### Version 0.1.0
+
+Released 2020-05-11
+
+* Initial Release
