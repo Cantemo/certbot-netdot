@@ -119,7 +119,8 @@ class NetdotClient:
 
     def remove_record(self, name):
         rr = self.lookup_rr(name)
-        rr.delete()
+        if rr:
+            rr.delete()
 
     def add_txt_record(self, validation_name, validation, ttl=30):
         rr = self.get_or_create_rr(validation_name)
