@@ -72,11 +72,17 @@ class NetdotAuthenticator(DNSAuthenticator):
         )
 
     def _get_netdot_client(self):
+        verify = self.credentials.conf("verify")
+
+        # Default verify to True
+        if verify is None:
+            verify = True
+
         return NetdotClient(
             self.credentials.conf("endpoint"),
             self.credentials.conf("username"),
             self.credentials.conf("password"),
-            as_bool(self.credentials.conf("verify"))
+            as_bool(verify)
         )
 
     def _perform(self, domain, validation_name, validation):
