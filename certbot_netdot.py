@@ -125,10 +125,6 @@ class NetdotClient:
     def add_txt_record(self, validation_name, validation, ttl=30):
         rr = self.get_or_create_rr(validation_name)
 
-        # Clear any existing rr
-        for txt in rr.txt_records:
-            txt.delete()
-
         rrtxt = pynetdot.RRTXT()
         rrtxt.txtdata = validation
         rrtxt.ttl = ttl
